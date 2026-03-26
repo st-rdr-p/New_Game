@@ -2,7 +2,9 @@
 
 ## Overview
 
-A **3D action-puzzle game core** (C#) inspired by **Sonic** with combat mechanics, **mouse-controlled camera**, and **multi-monitor damage feedback**. Engine-agnostic and designed to integrate into any 3D game engine (Unity, Godot, Unreal, custom engines, etc.).
+A **3D action-puzzle game core** (C#) inspired by **Sonic** with combat mechanics, **mouse-controlled camera**, and **multi-monitor damage feedback**. **Engine-agnostic** architecture with **complete Unity integration provided**.
+
+**👉 [UNITY_SETUP.md](UNITY_SETUP.md) — Get started with Unity in 5 minutes!**
 
 ### Features
 
