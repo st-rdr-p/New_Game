@@ -13,6 +13,8 @@ namespace GameCore
         {
             // Add systems in order of execution
             game.AddSystem(new Physics3DSystem());
+            game.AddSystem(new AudioSystem(audio));
+            game.AddSystem(new UISystem(renderer));
             game.AddSystem(new CollisionSystem());
             game.AddSystem(new PlayerInputSystem(input));
             game.AddSystem(new ProjectileSystem());
@@ -25,6 +27,16 @@ namespace GameCore
             game.AddSystem(new CameraSystem(input));
             game.AddSystem(new ScreenFlashSystem(renderer));
             game.AddSystem(new RetroGraphicsSystem(renderer));
+
+            // Create audio manager entity
+            var audioManager = game.CreateEntity();
+            audioManager.AddComponent(new Tag("AudioManager"));
+            audioManager.AddComponent(new AudioManager { IsInitialized = true });
+
+            // Create UI manager entity
+            var uiManager = game.CreateEntity();
+            uiManager.AddComponent(new Tag("UIManager"));
+            uiManager.AddComponent(new UIManager { ShowAllUI = true });
 
             // Create player
             var player = game.CreateEntity();

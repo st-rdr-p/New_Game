@@ -1,0 +1,47 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "name": "Player",
+      "type": "Player",
+      "triggerRange": 10.0,
+      "canRepeat": true,
+      "sequences": [
+        {
+          "id": 0,
+          "name": "greeting",
+          "lines": [
+            {
+              "speaker": "Player",
+              "text": "",
+              "duration": 0,
+              "audioFile": "dialogue/player_greeting_01.wav"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the_entity",
+      "name": "The Entity",
+      "type": "Boss",
+      "triggerRange": 20.0,
+      "canRepeat": false,
+      "startCombatAfter": true,
+      "sequences": [
+        {
+          "id": 0,
+          "name": "encounter",
+          "lines": [
+            {
+              "speaker": "The Entity",
+              "text": "",
+              "duration": 0,
+              "audioFile": "dialogue/entity_encounter_01.wav"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

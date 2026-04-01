@@ -1,0 +1,12 @@
+Entity ID,Entity Name,Type,Trigger Range,Can Repeat,Start Combat After,Sequence ID,Sequence Name,Line Speaker,Line Text,Line Duration,Audio File,Choices (JSON),Next Sequence
+merchant_elara,Elara the Merchant,NPC,8.0,true,false,0,greeting,Elara,Welcome to my shop traveler!,2.5,dialogue/merchant_greeting_01.wav,"[{""text"":""Show potions"",""nextSeq"":1},{""text"":""Just browsing"",""nextSeq"":2}]",-1
+merchant_elara,Elara the Merchant,NPC,8.0,true,false,1,potions,Elara,Here are my finest potions!,2.5,dialogue/merchant_potions_01.wav,[],-1
+merchant_elara,Elara the Merchant,NPC,8.0,true,false,2,browsing,Elara,Feel free to look around.,2.0,dialogue/merchant_browse_01.wav,[],-1
+goblin_warrior,Brutal Goblin,Enemy,15.0,false,true,0,encounter,Goblin,INTRUDER! How dare you!,1.5,dialogue/goblin_angry_01.wav,[],-1
+goblin_warrior,Brutal Goblin,Enemy,15.0,false,true,0,encounter,Goblin,Prepare yourself!,1.0,dialogue/goblin_threat_01.wav,[],-1
+sage_mentor,Wise Sage,NPC,10.0,false,false,0,intro,Sage,Greetings wanderer. I have been expecting you.,2.5,dialogue/sage_greeting_01.wav,"[{""text"":""I will help"",""nextSeq"":1},{""text"":""Tell me more"",""nextSeq"":2}]",-1
+sage_mentor,Wise Sage,NPC,10.0,false,false,1,accepted,Sage,Excellent! Your courage gives me hope.,2.0,dialogue/sage_thanks_01.wav,[],-1
+sage_mentor,Wise Sage,NPC,10.0,false,false,2,more_info,Sage,The darkness spreads across our land.,3.0,dialogue/sage_lore_01.wav,[],1
+dragon_boss,Ancient Dragon,Boss,25.0,false,true,0,intro,Dragon,So another mortal awakens me from slumber.,3.0,dialogue/dragon_awake_01.wav,"[{""text"":""Challenge you"",""nextSeq"":1},{""text"":""Your story?"",""nextSeq"":2}]",-1
+dragon_boss,Ancient Dragon,Boss,25.0,false,true,1,defiance,Dragon,Your arrogance will be your undoing!,2.5,dialogue/dragon_battle_01.wav,[],-1
+dragon_boss,Ancient Dragon,Boss,25.0,false,true,2,backstory,Dragon,I have watched empires crumble to dust.,4.0,dialogue/dragon_history_01.wav,[],-1

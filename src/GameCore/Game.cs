@@ -8,12 +8,15 @@ namespace GameCore
         private readonly List<Entity> _entities = new();
         private readonly List<ISystem> _systems = new();
         private readonly IEngineInput _input;
+        private readonly IEngineAudio _audio;
 
         public IReadOnlyList<Entity> Entities => _entities;
+        public IEngineAudio Audio => _audio;
 
-        public Game(IEngineInput input)
+        public Game(IEngineInput input, IEngineAudio audio = null)
         {
             _input = input;
+            _audio = audio;
         }
 
         public Entity CreateEntity()

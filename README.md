@@ -20,6 +20,8 @@ A **3D action-puzzle game core** (C#) inspired by **Sonic** with combat mechanic
 - **🎨 Retro Graphics**: pixelated, color-reduced rendering like classic Sonic (multiple presets)
 - **Enemy AI**: patrol → chase → attack state machine
 - **Puzzle Interactions**: switches, levers, doors with callbacks
+- **🔊 Audio System**: sound effects, background music, volume control, preloading
+- **🎯 UI System**: health bars, score display, damage popups, minimap, crosshair, interaction prompts
 - **Component-based architecture**: ECS-style entity system
 
 ### Core files
@@ -41,8 +43,16 @@ A **3D action-puzzle game core** (C#) inspired by **Sonic** with combat mechanic
 | `GameSetup.cs` | Complete game initialization: player, enemy, camera, collectibles, hazards, platforms |
 | `Game.cs` | Main game loop & entity manager |
 | `Entity.cs` | ECS entity with component storage |
-| `IEngineRenderer.cs` | Engine bridge interfaces (mouse, flash, retro graphics, screen size) |
+| `IEngineRenderer.cs` | Engine bridge interfaces (mouse, flash, retro graphics, screen size, audio) |
 | `EngineBridgeExamples.cs` | Unity/Godot implementation examples |
+| `AudioComponents.cs` | AudioSource, AudioManager, SFXPlayer, BackgroundMusic components |
+| `AudioSystem.cs` | Audio processing system with volume control & fade effects |
+| `AudioExample.cs` | Complete audio usage examples |
+| `UnityAudioBridge.cs` | Full Unity audio implementation (preload, cache, volume) |
+| `UIComponents.cs` | HealthBar, ScoreDisplay, DamageNumber, Minimap, TextDisplay, etc. |
+| `UISystem.cs` | UI element processing, positioning, animations & drawing |
+| `UIExample.cs` | Complete UI usage examples |
+| `UI_SYSTEM_GUIDE.md` | Comprehensive UI system documentation |
 
 ## Quick start
 
@@ -52,8 +62,8 @@ var inputBridge = new UnityInputBridge();           // Implement IEngineInput
 var rendererBridge = new UnityRendererBridge();     // Implement IEngineRenderer
 var audioBridge = new UnityAudioBridge();           // Implement IEngineAudio
 
-// 2. Initialize game
-var game = new GameCore.Game(inputBridge);
+// 2. Initialize game with audio support
+var game = new GameCore.Game(inputBridge, audioBridge);
 GameSetup.SetupSonicLikeGame(game, inputBridge, rendererBridge, audioBridge);
 
 // 3. In your engine's update loop
@@ -462,20 +472,174 @@ Types:
 
 ## Audio system
 
-Bridge interface for sound playback:
+Complete audio system with sound effects, background music, volume control, and preloading. **See [AUDIO_SYSTEM_GUIDE.md](AUDIO_SYSTEM_GUIDE.md) for full documentation.**
+
+### Quick start
+
+```csharp
+// Play sound effects
+audioSystem.PlaySoundOnEntity(entity, "jump_sound", volume: 0.8f);
+
+// Play background music
+audioSystem.PlayBackgroundMusic("level_1_music", volume: 0.5f, fadeInTime: 2.0f);
+
+// Control volume
+var audioManager = game.Entities.First(e => e.TryGetComponent<AudioManager>(out _));
+audioManager.MasterVolume = 0.8f;
+audioManager.SFXVolume = 0.9f;
+audioManager.MusicVolume = 0.5f;
+
+// Queue sounds to play in sequence
+var sounds = new[]
+{
+    new SoundEffect("powerup_activate", volume: 0.7f),
+    new SoundEffect("powerup_loop", volume: 0.6f, delay: 0.5f),
+};
+audioSystem.QueueSounds(entity, sounds);
+```
+
+### Features
+
+- **Sound Effects**: Play one-shot sounds with caching
+- **Background Music**: Looping music with fade in/out transitions
+- **Volume Control**: Master + separate SFX/Music channels
+- **Audio Queuing**: Play multiple sounds sequentially
+- **Preloading**: Load audio assets ahead of time for performance
+- **Muting**: Mute all audio globally
+- **Spatial Audio**: 3D audio positioning (extensible)
+- **Audio Types**: SFX, Music, Voice, Ambient categorization
+
+### Components
+
+- **AudioSource**: Play individual sounds on entities
+- **AudioManager**: Global audio settings & state
+- **BackgroundMusic**: Background music with fade effects
+- **SFXPlayer**: Queue-based sequential sound effects
+- **AudioSettings**: Advanced properties (pitch, spatial audio, type)
+
+### Integration
+
+Sounds automatically triggered by game systems:
+- **Collectibles**: `collect_coin`, `collect_ring`, `collect_healthpickup`
+- **Hazards**: `hazard_spike`, `hazard_lava`, `hazard_pit`, etc.
+- **Damage**: `player_hit`, `enemy_hit`, etc.
+- **Dialogue**: Voice playback from DialogueSystem
+
+### Engine bridge
 
 ```csharp
 public interface IEngineAudio
 {
-    void PlaySound(string soundId);   // "collect_ring", "hazard_spike"
+    void PlaySound(string soundId, float volume = 1.0f);
     void StopSound(string soundId);
+    void PlayBackgroundMusic(string musicId, float volume = 0.5f);
+    void StopBackgroundMusic(float fadeOutTime = 0f);
+    void SetMasterVolume(float volume);
+    float GetMasterVolume();
+    void SetSFXVolume(float volume);
+    void SetMusicVolume(float volume);
+    bool IsSoundPlaying(string soundId);
+    void PreloadSound(string soundId);
 }
-
-// Sounds auto-triggered:
-// - collect_coin, collect_ring, collect_healthpickup
-// - hazard_spike, hazard_lava, hazard_pit, etc.
-// - player_hit, enemy_defeat
 ```
+
+### File organization
+
+Audio files in Unity `Resources` folder:
+```
+Assets/Resources/Audio/
+├── SFX/
+│   ├── player_jump.ogg
+│   ├── collect_ring.ogg
+│   └── ...
+├── Music/
+│   ├── level_1.ogg
+│   ├── boss_battle.ogg
+│   └── ...
+└── Voice/
+    ├── npc_greeting.ogg
+    └── ...
+```
+
+## Controls summary
+
+## UI System
+
+Complete in-game HUD and UI elements. **See [UI_SYSTEM_GUIDE.md](UI_SYSTEM_GUIDE.md) for full documentation.**
+
+### Quick start
+
+```csharp
+// Create a health bar above the player
+var healthBar = new HealthBar
+{
+    TargetEntity = player,
+    Width = 200f,
+    Height = 20f,
+    Anchor = UIElement.AnchorPosition.TopLeft,
+    Offset = new Vector3(20, 20, 0),
+    FillColor = "green",
+    ShowHealthText = true
+};
+
+var healthBarEntity = game.CreateEntity();
+healthBarEntity.AddComponent(healthBar);
+
+// Show damage numbers on hits
+uiSystem.ShowDamageNumber(hitPosition, 25, isCritical: false);
+
+// Show score popups on collection
+uiSystem.ShowScorePopup(coinPosition, 10);
+
+// Create HUD elements
+var crosshair = game.CreateEntity();
+crosshair.AddComponent(new Crosshair
+{
+    Style = "cross",
+    Size = 10f,
+    Anchor = UIElement.AnchorPosition.MiddleCenter
+});
+```
+
+### Components
+
+- **HealthBar**: Entity health with animated fill bar
+- **ScoreDisplay**: Score counter with optional popups
+- **DamageNumber**: Floating damage integers (auto-fade)
+- **ScorePopup**: Floating score animations
+- **TextDisplay**: Generic text UI
+- **Crosshair**: Aiming reticle
+- **Minimap**: World overview radar
+- **InteractionPrompt**: "Press E" prompts
+- **StatusEffectDisplay**: Active buff/debuff icons
+- **UIManager**: Global UI settings
+
+### Anchor Positions
+
+Position UI elements on screen:
+
+```
+TopLeft      TopCenter      TopRight
+  □          □              □
+
+MiddleLeft   MiddleCenter   MiddleRight
+  □          □              □
+
+BottomLeft   BottomCenter   BottomRight
+  □          □              □
+```
+
+### Features
+
+- **Health bars** animate smoothly to target health
+- **Damage numbers** float upward and fade out
+- **Score popups** show collected values
+- **Dynamic colors**: Health bar changes by health %
+- **Crosshair styles**: cross, dot, circle, target
+- **Minimap** shows entities in world range
+- **Interaction prompts** appear above interactables
+- **Pause-aware** UI can update when paused
+- **Opacity control** for all UI elements
 
 ## Controls summary
 
@@ -498,8 +662,9 @@ public interface IEngineAudio
 - [x] Projectile/weapon system
 - [x] Collectibles & power-ups
 - [x] Level obstacles (hazards, platforms, trampolines, conveyors)
-- [ ] Audio system integration
-- [ ] UI (health bar, score, menu)
+- [x] Audio system integration (sound effects, music, volume control)
+- [x] UI system (health bars, score, damage numbers, crosshair, minimap)
+- [ ] Pause/main menus (pause menu shown in UI examples)
 - [ ] Save/Load game state
 - [ ] Networking (multiplayer)
 - [ ] Unit tests

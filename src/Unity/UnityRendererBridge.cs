@@ -117,4 +117,95 @@ public class UnityRendererBridge : IEngineRenderer
     {
         return Screen.height;
     }
+
+    public void DrawHealthBar(Vector3 worldPosition, float currentHealth, float maxHealth, 
+        float width, float height, string fillColor = "green", string backgroundColor = "gray", 
+        float opacity = 1.0f)
+    {
+        // Convert world position to screen space
+        if (_mainCamera == null)
+            return;
+
+        Vector3 screenPos = _mainCamera.WorldToScreenPoint(worldPosition);
+        
+        // Draw background bar
+        DrawUIRectangle(screenPos, width, height, backgroundColor, opacity);
+        
+        // Draw fill bar
+        float fillPercent = Mathf.Clamp01(currentHealth / maxHealth);
+        float fillWidth = width * fillPercent;
+        DrawUIRectangle(screenPos, fillWidth, height, fillColor, opacity);
+    }
+
+    public void DrawUIText(string text, UIElement.AnchorPosition anchor, Vector3 offset, 
+        int fontSize, string color, float opacity)
+    {
+        // This would typically use Unity's TextMesh Pro or UI Text
+        // For now, we'll use Debug.Log as a placeholder
+        Debug.Log($"DrawUIText: {text} at {anchor} with color {color}");
+        
+        // In a real implementation:
+        // 1. Create/reuse a Text element in the canvas
+        // 2. Position it based on anchor and offset
+        // 3. Set font size and color
+        // 4. Apply opacity via alpha
+    }
+
+    public void DrawCrosshair(string style, float size, string color, float thickness, float opacity)
+    {
+        // Draw crosshair at screen center
+        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
+        DrawCrosshairAtPosition(screenCenter, style, size, color, thickness, opacity);
+    }
+
+    public void DrawMinimap(float size, float worldRange, UIElement.AnchorPosition anchor, 
+        Vector3 offset, string backgroundColor, string borderColor, float opacity)
+    {
+        // Calculate minimap position based on anchor
+        Vector2 minimapPos = CalculateAnchoredPosition(anchor, offset);
+        
+        // Draw minimap background
+        DrawUIRectangle(minimapPos, size, size, backgroundColor, opacity);
+        
+        // Draw minimap border
+        DrawUIBorder(minimapPos, size, size, borderColor, 2f, opacity);
+    }
+
+    private void DrawUIRectangle(Vector3 position, float width, float height, string color, float opacity)
+    {
+        // Placeholder for UI rectangle drawing
+        // In a real implementation, this would draw a rectangle on the canvas
+    }
+
+    private void DrawUIBorder(Vector2 position, float width, float height, string color, float thickness, float opacity)
+    {
+        // Placeholder for UI border drawing
+    }
+
+    private void DrawCrosshairAtPosition(Vector3 screenPos, string style, float size, string color, float thickness, float opacity)
+    {
+        // Placeholder for crosshair drawing
+        // Styles: "cross", "dot", "circle", "target"
+    }
+
+    private Vector2 CalculateAnchoredPosition(UIElement.AnchorPosition anchor, Vector3 offset)
+    {
+        int screenWidth = GetScreenWidth();
+        int screenHeight = GetScreenHeight();
+        Vector2 anchorPos = anchor switch
+        {
+            UIElement.AnchorPosition.TopLeft => new Vector2(0, screenHeight),
+            UIElement.AnchorPosition.TopCenter => new Vector2(screenWidth / 2f, screenHeight),
+            UIElement.AnchorPosition.TopRight => new Vector2(screenWidth, screenHeight),
+            UIElement.AnchorPosition.MiddleLeft => new Vector2(0, screenHeight / 2f),
+            UIElement.AnchorPosition.MiddleCenter => new Vector2(screenWidth / 2f, screenHeight / 2f),
+            UIElement.AnchorPosition.MiddleRight => new Vector2(screenWidth, screenHeight / 2f),
+            UIElement.AnchorPosition.BottomLeft => new Vector2(0, 0),
+            UIElement.AnchorPosition.BottomCenter => new Vector2(screenWidth / 2f, 0),
+            UIElement.AnchorPosition.BottomRight => new Vector2(screenWidth, 0),
+            _ => new Vector2(0, screenHeight)
+        };
+
+        return anchorPos + new Vector2(offset.x, offset.y);
+    }
 }
