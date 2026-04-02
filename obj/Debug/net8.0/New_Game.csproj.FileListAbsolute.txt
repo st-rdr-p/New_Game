@@ -1,0 +1,6 @@
+/workspaces/New_Game/obj/Debug/net8.0/New_Game.csproj.AssemblyReference.cache
+/workspaces/New_Game/obj/Debug/net8.0/New_Game.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/New_Game/obj/Debug/net8.0/New_Game.AssemblyInfoInputs.cache
+/workspaces/New_Game/obj/Debug/net8.0/New_Game.AssemblyInfo.cs
+/workspaces/New_Game/obj/Debug/net8.0/New_Game.csproj.CoreCompileInputs.cache
+/workspaces/New_Game/obj/Debug/net8.0/New_Game.sourcelink.json

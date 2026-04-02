@@ -26,3 +26,4 @@ namespace GameCore
         public float VelY { get; set; }
         public float Mass { get; set; } = 1.0f;
     }
+}

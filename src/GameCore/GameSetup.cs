@@ -59,6 +59,16 @@ namespace GameCore
         {
             SpawnDashRock(game, playerEntity, dashDirection);
         };
+
+            // Create sample enemy
+            var enemy = game.CreateEntity();
+            enemy.AddComponent(new Tag("Enemy"));
+            enemy.AddComponent(new Transform3D { Position = new Vector3(10, 0, 0) });
+            enemy.AddComponent(new Rigidbody3D { Mass = 1.0f, UseGravity = true });
+            enemy.AddComponent(new CollisionSphere { Radius = 1.0f });
+            enemy.AddComponent(new Health(50));
+            enemy.AddComponent(new EnemyAI 
+            {
                 AttackRange = 3f,
                 PatrolSpeed = 5f,
                 ChaseSpeed = 12f

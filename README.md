@@ -22,6 +22,10 @@ A **3D action-puzzle game core** (C#) inspired by **Sonic** with combat mechanic
 - **Puzzle Interactions**: switches, levers, doors with callbacks
 - **🔊 Audio System**: sound effects, background music, volume control, preloading
 - **🎯 UI System**: health bars, score display, damage popups, minimap, crosshair, interaction prompts
+- **⌨️ Input System**: keyboard input management, menu navigation, dialogue choices, save/load bindings
+- **💬 Dialogue System**: branching dialogue with voice acting support, JSON data-driven
+- **📋 Menu System**: pause menus, main menus, settings, menu stacking
+- **💾 Save/Load System**: 10 save slots, player/entity state persistence, playtime tracking
 - **Component-based architecture**: ECS-style entity system
 
 ### Core files
@@ -48,6 +52,26 @@ A **3D action-puzzle game core** (C#) inspired by **Sonic** with combat mechanic
 | `AudioComponents.cs` | AudioSource, AudioManager, SFXPlayer, BackgroundMusic components |
 | `AudioSystem.cs` | Audio processing system with volume control & fade effects |
 | `AudioExample.cs` | Complete audio usage examples |
+| **Input System** | |
+| `InputManager.cs` | Core input manager, key binding system, input state tracking |
+| `InputHandlers.cs` | MenuInputHandler, DialogueInputHandler, SaveLoadInputHandler, PlayerInputHandler |
+| `InputIntegrationExample.cs` | Complete integration examples for all input handlers |
+| **Dialogue & Menu Systems** | |
+| `DialogueComponents.cs` | DialogueLine, DialogueChoice, DialogueSequence, DialogueComponent, EncounterTrigger |
+| `DialogueSystem.cs` | Dialogue manager system with callbacks |
+| `DialogueDataLoader.cs` | JSON dialogue data loader |
+| `MenuComponents.cs` | MenuButton, MenuComponent, ConfirmDialog |
+| `MenuSystem.cs` | Menu manager with stacking, pause integration |
+| `MenuExamples.cs` | Pre-built menu templates |
+| **Save/Load System** | |
+| `SaveComponents.cs` | SaveSlot, GameState, PlayerState, EntityState, SaveableComponent |
+| `SaveLoadSystem.cs` | Save/load manager with file I/O |
+| `SaveLoadExamples.cs` | Save/load usage examples |
+| **Documentation** | |
+| `INPUT_SYSTEM_GUIDE.md` | Complete input system documentation |
+| `DIALOGUE_GUIDE.md` | Dialogue system setup and usage |
+| `MENUS_GUIDE.md` | Menu system guide |
+| `SAVELOAD_GUIDE.md` | Save/load system guide |
 | `UnityAudioBridge.cs` | Full Unity audio implementation (preload, cache, volume) |
 | `UIComponents.cs` | HealthBar, ScoreDisplay, DamageNumber, Minimap, TextDisplay, etc. |
 | `UISystem.cs` | UI element processing, positioning, animations & drawing |
@@ -72,6 +96,84 @@ void EngineUpdate(float deltaTime)
     game.Update(deltaTime);
 }
 ```
+
+## Testing
+
+The project includes **comprehensive unit tests** for core gameplay systems:
+
+### Running tests
+
+```bash
+cd GameTests
+dotnet test
+```
+
+### Test coverage
+
+- **54 total tests** (all passing ✅)
+- **21 Vector3 math tests**: operations, magnitude, normalization, Lerp, distance, dot product
+- **33 gameplay component tests**: health system, damage, collectibles, hazards, platforms
+
+### Test categories
+
+#### Health System (8 tests)
+- Initialization and max health
+- Damage application and clamping
+- Healing and maximum capping
+- Death state transitions
+- Multiple damage events
+
+#### Damage System (2 tests)
+- DamageSource property storage
+- Default values
+
+#### Collectibles (5 tests)
+- Ring, coin, health pickup creation
+- All collectible types supported
+- Collected state tracking
+
+#### Hazards (5 tests)
+- Spike, lava, and all hazard types
+- Damage amount configuration
+- Update method execution
+
+#### Platforms (6 tests)
+- Moving platform creation and wait times
+- Trampoline bounce force (default and custom)
+- Conveyor belt direction normalization
+
+#### Vector3 Math (21 tests)
+- Construction and statics (Zero, One, Up, Down, etc.)
+- Arithmetic (addition, subtraction, multiplication, division)
+- Magnitude, normalization, dot product
+- Distance calculation, Lerp (with and without clamping)
+- Equality, hashing, string representation
+
+#### Integration Tests (4 tests)
+- Player health with multiple damages
+- Collectible health restoration
+- Multiple hazards in sequence
+- Vector3 combat calculations (distance, direction, knockback)
+
+### Example test
+
+```csharp
+[Test]
+public void Health_TakeDamage_ReducesCurrentHealth()
+{
+    // Arrange
+    var health = new Health(100);
+
+    // Act
+    health.TakeDamage(25);
+
+    // Assert
+    Assert.That(health.CurrentHealth, Is.EqualTo(75));
+    Assert.That(health.IsAlive, Is.True);
+}
+```
+
+**Test project location**: `GameTests/GameplayComponentsTests.cs` and `GameTests/Vector3Tests.cs`
 
 ## Creating a player
 
@@ -664,8 +766,8 @@ BottomLeft   BottomCenter   BottomRight
 - [x] Level obstacles (hazards, platforms, trampolines, conveyors)
 - [x] Audio system integration (sound effects, music, volume control)
 - [x] UI system (health bars, score, damage numbers, crosshair, minimap)
-- [ ] Pause/main menus (pause menu shown in UI examples)
-- [ ] Save/Load game state
+- [x] Pause/main menus (pause menu shown in UI examples)
+- [x] Save/Load game state
 - [ ] Networking (multiplayer)
-- [ ] Unit tests
+- [x] Unit tests
 

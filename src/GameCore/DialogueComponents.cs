@@ -297,17 +297,4 @@ namespace GameCore
             }
         }
     }
-
-    /// <summary>
-    /// Tag component for identifying entity types.
-    /// </summary>
-    public class Tag : Component
-    {
-        public string Value { get; set; }
-
-        public Tag(string value)
-        {
-            Value = value;
-        }
-    }
 }
