@@ -1,0 +1,82 @@
+==========================
+LORE ENTRY 05: KARMA
+Zone 5 · The Forest
+==========================
+
+NARRATOR - MAIN TEXT
+Duration: ~18 seconds
+
+---
+
+"It left things for me. A television. A CD player. The disc already inside it. A note tied to the screen in symbols I can't read. I found an axe buried in a tree. The handle was new. The blade was damaged.
+
+It's making a puzzle out of this. It left me pieces."
+
+---
+
+[HANDWRITTEN MARGIN NOTE — DIFFERENT VOICE/DELIVERY]
+
+"It's not a puzzle. It's a stage."
+
+---
+
+Final realization (continuing as narrator):
+
+"Everything it's done — the store, the car, the house — it wasn't hunting me. It was rehearsing."
+
+---
+
+VOICE ACTING NOTES:
+- Tone: Confusion shifting to understanding, then dread
+- Set pieces section: Cataloging objects methodically, trying to understand (slightly detached)
+- "It's making a puzzle out of this. It left me pieces." — realization dawning but wrong conclusion reached
+- [HANDWRITTEN NOTE BREAK] — THIS IS CRITICAL. Different delivery for the margin note:
+  * Different speaker/voice if possible (second person? corrupted audio? distorted?)
+  * Or: Same voice but DIFFERENT tone - more knowing, more ominous
+  * Should feel like interruption from someone else examining this document
+  * Delivery: Quiet, certain, corrective
+  * "It's not a puzzle." — beats down the protagonist's theory
+  * "It's a stage." — final word lands with horror
+- Final realization: Everything clicks. The horror of understanding the Entity's true intent.
+- "Everything it's done — the store, the car, the house" — rapid-fire enumeration of prior encounters
+- "it wasn't hunting me. It was rehearsing." — delivered with cold recognition
+
+CHARACTER ARC ACROSS THIS ENTRY:
+- Confusion → theory (puzzle) → CORRECTION (margin note) → comprehension (stage performance)
+- This is the moment the protagonist understands they're not prey, they're part of a production
+
+PRODUCTION NOTES FOR MARGIN NOTE:
+Option A: Use a different voice actor (unknown commenter)
+Option B: Process same voice through audio filter (distortion, compression) to mark it as different
+Option C: Pitch shift slightly, add slight reverb to suggest it's from "outside the document"
+This margin note implies the document changed hands — someone else wrote in the margin, adding their own understanding
+
+---
+
+FILE FORMAT FOR EXPORT:
+Primary file: karma_005_main.mp3 (~22-26 seconds total)
+- Includes full narration + margin note + final realization
+- Margin note should be clearly distinct in delivery/processing
+
+Alternative (if using second voice):
+- karma_005_main.mp3 (18-20 sec, first narrator voice)
+- karma_005_margin.mp3 (2-3 sec, second voice/delivery - the handwritten note)
+- karma_005_ending.mp3 (3-4 sec, realization after margin note)
+
+Expected total duration: 22-26 seconds
+File quality: 44.1kHz, 16-bit preferred
+
+NARRATIVE CONTEXT:
+- This is when the protagonist realizes the Entity isn't randomly hunting
+- Everything was intentional staging/rehearsal
+- The question becomes: rehearsal for WHAT?
+- Sets up for boss encounter and final act confrontation
+- Margin note suggests this document has been read and annotated by others
+- Creates mystery: Who left that note? Are they still out there?
+
+ENVIRONMENTAL STORYTELLING ELEMENTS:
+- TV, CD player, disc on display = set pieces for exploration
+- Axe = second melee weapon, connects tool/prop to Entity's "stage setup"
+- Symbols on the note = unsolved mystery, visual storytelling
+
+==========================

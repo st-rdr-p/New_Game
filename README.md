@@ -58,8 +58,11 @@ A **3D action-puzzle game core** (C#) inspired by **Sonic** with combat mechanic
 | `InputIntegrationExample.cs` | Complete integration examples for all input handlers |
 | **Dialogue & Menu Systems** | |
 | `DialogueComponents.cs` | DialogueLine, DialogueChoice, DialogueSequence, DialogueComponent, EncounterTrigger |
+| `DialogueScriptParser.cs` | **NEW**: Dialogue script parser + builder (write dialogue without code!) |
 | `DialogueSystem.cs` | Dialogue manager system with callbacks |
 | `DialogueDataLoader.cs` | JSON dialogue data loader |
+| `DIALOGUE_SCRIPTING_GUIDE.md` | **NEW**: Guide for writing dialogue scripts (non-code) |
+| `example_dialogue.txt` | **NEW**: Example dialogue script file |
 | `MenuComponents.cs` | MenuButton, MenuComponent, ConfirmDialog |
 | `MenuSystem.cs` | Menu manager with stacking, pause integration |
 | `MenuExamples.cs` | Pre-built menu templates |

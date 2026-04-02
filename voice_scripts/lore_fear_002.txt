@@ -1,0 +1,55 @@
+==========================
+LORE ENTRY 02: FEAR
+Zone 2 · The Highway
+==========================
+
+NARRATOR - MAIN TEXT
+Duration: ~20 seconds
+
+---
+
+"A car on the road in front of me — its tyre is shredded, flinging sparks. But it drives pin straight. Like something's holding the wheel. I pass it. The moment I do, it loses control. Like I cut the strings. Like it only needed to be in front of me. Like it was there to make sure I noticed.
+
+I noticed."
+
+---
+
+[AUDIO NOTE: Static hiss increases after this line]
+
+Then continue with final line after static:
+
+"It's using the world as its hands. Everything around me is a weapon it hasn't thrown yet."
+
+---
+
+VOICE ACTING NOTES:
+- Tone: Observational dread escalating to realization and then defiant acceptance
+- Start: Confused, then gradually understanding the wrongness
+- Middle: "I noticed" is an acknowledgment moment (slight pause before, matter-of-fact delivery)
+- After static: Voice should sound more distant/filtered, like transmission over deteriorating signal
+- Final line: Each phrase is a new realization, building horror steadily
+- Audio treatment: Consider layering the final line with static underneath (not drowning it out, but present)
+
+AUDIO TECHNICAL NOTES:
+- Static hiss should be SEPARATE track or notation for sound designer
+- Narrator voice should start clean, remain clean through main dialogue
+- After "I noticed." - brief silent gap (~1 second), then static fades in (~3 seconds)
+- Voice returns clean for final line
+- Total duration with effects: ~25-30 seconds
+
+---
+
+FILE FORMAT FOR EXPORT:
+Primary file: fear_002_main.mp3 (~20-22 seconds clean narration)
+Secondary: fear_002_static.ogg (ambient static, ~3 seconds fade-in)
+Expected duration: 25-30 seconds total with sound effects
+File quality: 44.1kHz, 16-bit preferred (mono acceptable for ambient effects)
+
+ASSEMBLY NOTES FOR SOUND TEAM:
+1. Play fear_002_main.mp3 from start
+2. At ~11 seconds (after "I noticed."), begin fear_002_static.ogg fade-in
+3. Keep static subtle (not drowning voice)
+4. Continue overlaid for final line
+5. Fade out static at line end
+
+==========================

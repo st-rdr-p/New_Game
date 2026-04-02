@@ -1,0 +1,164 @@
+==========================
+LORE ENTRY 08: GONE
+Post-Boss · Credits Sequence
+==========================
+
+NARRATOR - FINAL ENTRY
+Duration: ~12 seconds
+
+---
+
+"'You're gonna get your soul ring ripped right out of you.'
+
+My soul ring. That's what I'd been carrying. All those monsters — they had souls. The disc was a distraction. The ring was always the point.
+
+'Any last words?'
+
+Fuck you.
+
+— K."
+
+---
+
+VOICE ACTING NOTES - THE FINAL WORD:
+
+This is Kale's last recording. It plays DURING credits, not after the boss fight. Everyone who finds the disc will eventually hear this.
+
+THE ENTITY'S THREAT (Processed voice):
+- "You're gonna get your soul ring ripped right out of you."
+- Delivered with certainty, anticipation, finality
+- This is Entity claiming victory before the final act
+
+KALE'S FINAL REALIZATION:
+- "My soul ring. That's what I'd been carrying."
+- Calm. Understanding. The final piece clicks into place.
+- Everything has been leading to this
+- Not panicked — accepts the truth with grim clarity
+
+CONTEXT:
+- "All those monsters — they had souls."
+- The system revealed: Everything hunted, everything killed, everything fought had a soul captured in a ring
+- "The disc was a distraction. The ring was always the point."
+- Kale understands Entity's true goal: Collecting soul rings, not just tormenting people
+
+THE FINAL EXCHANGE:
+- Entity: "Any last words?"
+- Tone shift in Kale's voice: From resigned understanding to DEFIANCE
+- Kale's last words: "Fuck you."
+- Two syllables, but they're everything
+- Not angry or loud — quiet, steady, absolutely resolute
+- This is not someone breaking. This is someone refusing to bend.
+
+THE SIGNATURE:
+- "— K."
+- Spoken so softly it's almost a whisper
+- Or: Not spoken at all, just appeared on-screen as text while silence carries out
+- Optional: Slight sound effect of recording ending or disc being closed
+
+PERFORMANCE DIRECTION:
+- Start: Resigned calm (realization)
+- Middle: Acceptance of fate
+- Final line: Absolute defiance and strength in the face of erasure
+- The defiance should be QUIET, not screamed
+- More powerful that way — a refusal that cannot be shaken
+
+---
+
+FILE FORMAT FOR EXPORT:
+
+Option A (Single integrated file):
+- gone_008_main.mp3 (~14-16 seconds total)
+- Includes Entity voice (processed), Kale's realization, Entity's question, Kale's final words
+
+Option B (Separate tracks):
+- gone_008_entity_threat.mp3 (~3 sec)
+- gone_008_kale_realization.mp3 (~7 sec)
+- gone_008_entity_question.mp3 (~2 sec)
+- gone_008_kale_final.mp3 (~3 sec, just "Fuck you" + signature)
+
+AUDIO PRODUCTION NOTES:
+- This is the CLEANEST entry (no corruption, no distortion except Entity voice)
+- Played over credits visuals/music
+- Should feel like finding a final message
+- Entity voice should be consistent with Entry 06
+- Kale's "Fuck you" should carry weight — this is his final act of resistance
+- Consider: Fade to black after "Fuck you" as credits roll
+
+---
+
+NARRATIVE SIGNIFICANCE - THE ENDING:
+
+Kale's story is COMPLETE and TRAGIC:
+- He was a tool, not a hero
+- He didn't escape — he was sacrificed
+- His soul ring (and therefore his soul) was the true objective
+- But he goes out DEFIANT, not broken
+
+THE LARGER STORY:
+- Kale is not the first to find the disc
+- Everyone who finds it becomes part of the Entity's "rehearsal"
+- The player is now following the same path Kale did
+- The question: Will the player become another victim? Or break the cycle?
+
+POST-CREDITS CONTEXT:
+- "The disc is still out there" — Someone else will find it
+- New Game+ becomes available
+- Starting with the disc in inventory
+- Entity aggression at MAXIMUM from the start
+- The player knows the truth from the beginning
+- The question remains: Can knowing the truth change the outcome?
+
+THE CYCLE:
+- Rehearsal
+- Performance  
+- Collection
+- Repeat
+
+Kale completes one cycle. The player began theirs when they picked up the disc.
+
+---
+
+PRODUCTION CONSIDERATIONS:
+
+TONE & DELIVERY:
+- This should NOT feel like a sad ending (though it is)
+- It should feel like a POWERFUL ending
+- Kale dies, but his defiance echoes
+- His final insult will be heard by everyone who comes after
+- In a way, his voice transcends death through the recording
+
+ENDING SEQUENCE FLOW:
+1. Boss defeated
+2. Credits begin rolling
+3. End-screen: "The disc is still out there"
+4. During credits: gone_008_main.mp3 plays
+5. Kale's final "Fuck you" lands as credits end
+6. New Game+ option appears
+
+CHARACTER ARC COMPLETION:
+- DREAD: Starting confusion
+- FEAR: Building terror
+- HORROR: Direct confrontation
+- FREEFALL: Understanding the Entity's power
+- KARMA: Realization of Entity's intent
+- BUILD-UP: First sighting, direct encounter
+- TRANSPORT: Emotional devastation, realization of guilt
+- GONE: Acceptance, understanding, final defiance
+
+This is Kale's complete story told through eight lore entries.
+
+---
+
+FINAL DIRECTOR'S NOTE:
+
+This is the moment that defines the entire game.
+Not the boss fight — but Kale's last words.
+"Fuck you." — Two syllables that refuse to be erased.
+Whatever happens to him, he faced the Entity as a person, not as prey.
+That defiance is what carries forward.
+That's why the disc matters.
+That's why the player has to listen.
+
+Make it count.
+
+==========================

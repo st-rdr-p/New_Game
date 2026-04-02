@@ -1,0 +1,127 @@
+==========================
+LORE ENTRY 07: TRANSPORT
+Zone 6 · The Portal
+==========================
+
+NARRATOR - MAIN TEXT
+Duration: ~15 seconds
+
+---
+
+"It told me the ring I'd been carrying wasn't mine. It said I killed her. I said I hadn't. It said: 'Oh but you did. You beat her senseless with a bat. I watched.'
+
+The shapeshifter. The one in my garage. That was—"
+
+---
+
+[FILE ENDS — ABRUPT TERMINATION]
+
+---
+
+VOICE ACTING NOTES - CRITICAL DELIVERY:
+
+This entire entry is about the REALIZATION hitting the protagonist.
+
+OPENING DIALOGUE:
+- The Entity speaking (use Entity voice processing from Entry 06)
+- "the ring I'd been carrying wasn't mine" — accusal
+- "It said I killed her" — devastating accusation
+- "I watched" — Entity's admission of knowledge, testimony
+
+NARRATOR RESPONSE:
+- "I said I hadn't" — desperate denial
+- But the doubt is already there, uncertainty creeping in
+
+THE TURN:
+- "The shapeshifter. The one in my garage." — realization dawning
+- Tone shift: From denial to horrifying understanding
+- "That was—" — THE CUT-OFF
+
+DELIVERY BREAKDOWN:
+1. Entity's voice (processed): Cold, factual, damning. "Oh but you did. You beat her senseless with a bat. I watched."
+2. Narrator's denial: "I said I hadn't." Quick, reflexive, not fully committed
+3. The realization starts: "The shapeshifter. The one in my garage." — voice shaking slightly
+4. Final words: "That was—" 
+   - DO NOT COMPLETE THE THOUGHT
+   - Voice should crack/break at this point
+   - Hang on the dash for 2-3 seconds of silence
+   - Player's imagination fills in: "...her"
+
+THE EMOTIONAL CORE:
+- Everything the player did was manipulation
+- The "person" they killed was not what they thought it was
+- Or WAS it their loved one, and the Entity is lying?
+- The ambiguity is intentional
+- The abrupt cut makes the player *become* the protagonist in that moment of doubt
+
+---
+
+FILE FORMAT FOR EXPORT:
+
+Option A (Integrated):
+- transport_007_main.mp3 (~18-20 seconds total)
+- Includes Entity voice (processed), narrator dialogue, and abrupt cut with silence
+
+Option B (Separate tracks):
+- transport_007_entity.mp3 (~4-5 sec, accusal dialogue)
+- transport_007_narrator_denial.mp3 (~2 sec, "I said I hadn't")
+- transport_007_realization.mp3 (~8-10 sec, ending in abrupt cut + 2-3 sec silence)
+
+AUDIO PRODUCTION NOTES:
+- This entry should feel DIFFERENT from others: urgent, raw, interrupted
+- The Entity voice should be clearly the Entity (use same processing as Entry 06)
+- Narrator voice cracks/breaks at "That was—"
+- SILENCE after the dash is essential — do NOT cut it off cleanly
+- Total trailing silence: 2-3 seconds of dead air after the cut-off
+
+---
+
+NARRATIVE SIGNIFICANCE:
+
+This is the EMOTIONAL CLIMAX before the final boss fight.
+
+The protagonist learns:
+1. They've been carrying someone's soul (in the ring)
+2. They may have killed them without knowing
+3. The Entity has been manipulating them all along
+4. Everything they did was predetermined in the Entity's "rehearsal"
+
+The abrupt ending forces the player to:
+- Complete the realization themselves ("That was... her?")
+- Carry this uncertainty into the final confrontation
+- Experience the same disorientation and horror the protagonist feels
+- The question becomes: Is the Entity telling the truth? Or is it lying?
+
+GAMEPLAY CONTEXT:
+- Ring item changes appearance (darker, dimmer red)
+- Ring gains tooltip: "Someone else's soul"
+- Player enters the hardest fight while emotionally compromised
+- This is why the Entity was "rehearsing" — it was setting up this exact moment
+- The protagonist has been a pawn the entire time
+
+TONE & PACING:
+- This entry is SHORT deliberately
+- Fast, brutal, devastating
+- No time to process
+- Just like the narrative: BAM — realization — CUT
+- The brevity is part of the power
+
+THE SILENCE:
+- The silence after "That was—" is NOT a technical issue
+- It's the player sitting with the horror
+- It's the protagonist frozen in realization
+- It's the moment before everything changes
+
+---
+
+DIRECTOR'S NOTE FOR YOUR PERFORMANCE:
+You need to convey:
+1. Entity's malicious certainty (processed voice)
+2. Protagonist's initial denial (automatic, fearful)
+3. Slow-dawning horror as connections form
+4. Voice BREAKING as the truth lands
+5. The abrupt cut as if mid-gasp or mid-discovery
+
+This is the emotional peak of the game. Get it right, and players will feel HAUNTED going into the final fight.
+
+==========================

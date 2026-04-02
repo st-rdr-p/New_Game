@@ -1,0 +1,67 @@
+SEQ main_greeting
+  NPC: OldSage
+    "Welcome, brave adventurer." (voice_sage_welcome.mp3, 2.5)
+    "I am the keeper of the Sacred Crystal."
+    "Dark forces have been searching for it..."
+    
+  CHOICE
+    [I'll help you] -> SEQUENCE: accept_quest
+    [Why me?] -> SEQUENCE: question
+    [Not interested] -> SEQUENCE: reject
+
+SEQ question
+  NPC: OldSage
+    "You seem capable, perhaps even destined." (voice_sage_destiny.mp3, 2.3)
+    "The ancient prophecies spoke of one like you."
+    
+  CHOICE
+    [I'm convinced] -> SEQUENCE: accept_quest
+    [Still no] -> SEQUENCE: reject
+    [Tell me more] -> SEQUENCE: lore_dump
+
+SEQ lore_dump
+  NPC: OldSage
+    "Legend speaks of a time of darkness..." (voice_sage_legend.mp3, 4.0)
+    "When shadow consumed the lands."
+    "But a hero emerged, wielding light itself."
+    "Now, history may repeat. Will you be that hero?"
+    
+  CHOICE
+    [Yes, I will] -> SEQUENCE: accept_quest
+    [No way] -> SEQUENCE: reject
+
+SEQ accept_quest
+  NPC: OldSage
+    "Excellent!" (voice_sage_excited.mp3, 1.5)
+    "The Crystal rests in the Mountain Peak."
+    "Beware - many creatures guard it."
+    "Bring it back safely, and the realm shall be saved." (voice_sage_final.mp3, 3.0)
+
+SEQ quest_update
+  NPC: OldSage
+    "Have you found the Crystal?" (voice_sage_check.mp3, 2.0)
+    
+  CHOICE
+    [Almost there] -> SEQUENCE: encourage
+    [Still searching] -> SEQUENCE: hint
+    [Found it!] -> SEQUENCE: crystal_obtained
+
+SEQ encourage
+  NPC: OldSage
+    "You are doing well, I can feel it!" (voice_sage_encouragement.mp3, 2.5)
+    "Do not give up now!"
+
+SEQ hint
+  NPC: OldSage
+    "Seek the highest peak. That is where it lies." (voice_sage_hint.mp3, 2.5)
+    "The creature guarding it is weak to fire."
+
+SEQ crystal_obtained
+  NPC: OldSage
+    "YES! You have done it!" (voice_sage_joy.mp3, 2.0)
+    "The realm is saved. You are a true hero." (voice_sage_thanks.mp3, 2.5)
+
+SEQ reject
+  NPC: OldSage
+    "So be it. Perhaps when you are braver..." (voice_sage_disappointed.mp3, 2.5)
+    "Should you change your mind, I will be here."

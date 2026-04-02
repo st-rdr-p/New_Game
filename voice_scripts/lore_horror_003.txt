@@ -1,0 +1,66 @@
+==========================
+LORE ENTRY 03: HORROR
+Zone 3 · The House
+==========================
+
+NARRATOR - MAIN TEXT
+Duration: ~25 seconds
+
+---
+
+"There was something in the attic. It looked like a fox — or a dog — something without a tail. I swung at it and it disappeared in a cloud of red. Not blood. Not ash. It just — wasn't there.
+
+Then something yanked me to the floor. Nothing touched me. Nothing was there.
+
+Then I found the garage. She called my name from the garage. But her voice was wrong — like a human sound played through a machine. I grabbed the bat."
+
+---
+
+[REDACTED — AUTHOR REQUEST]
+
+---
+
+Final line after redaction (with heavy finality):
+
+"Its blood was blue."
+
+---
+
+VOICE ACTING NOTES:
+- Tone: Escalating panic, disorientation, then violent action
+- Attic section: Confusion, something's OFF about the description (fox/dog/no tail - uncertainty)
+- "Red cloud" moment: Horror realization mid-swing
+- "Nothing was there" lines: Building panic, things are becoming impossible
+- Garage section: DREAD. Her voice calling builds the worst anticipation
+- "wrong — like a human sound played through a machine" — this is the turning point, delivery should be chilled
+- "I grabbed the bat" — ACTION, decisiveness, protective instinct
+- [REDACTED section pause] — brief silence here to let the mystery hang (~2 seconds of dead air)
+- Final line "Its blood was blue." — shocked statement of fact, almost confused, definitely unnatural
+
+CHARACTER VOICE NOTES:
+- Breathing becomes more labored as panic increases
+- Slight vocal strain when saying "grabbed the bat" (action moment)
+- Final "Its blood was blue" should sound detached, like stating something impossible
+- Consider very slight reverb on "She called my name from the garage" to suggest space/echo
+
+PACING:
+- First 3 paragraphs: Build steadily
+- [REDACTED] moment: Plays on listener's imagination (leave them wondering)
+- Final line: Lands as a revelation/confirmation of wrongness
+
+---
+
+FILE FORMAT FOR EXPORT:
+Primary file: horror_003_main.mp3 (~30-35 seconds total with pauses)
+- Includes the full monologue with [REDACTED] silence built in
+- Final line separate emphasis if needed: horror_003_ending.mp3 (~3 seconds)
+Expected total duration: 30-35 seconds
+File quality: 44.1kHz, 16-bit preferred
+
+PRODUCTION NOTES:
+- This should sound like an person's personal recording/transcription
+- Not overly produced — raw emotion is key
+- The [REDACTED] section creates narrative mystery: what happened?
+- "Its blood was blue" is a visual/lore confirmation that will matter later
+
+==========================

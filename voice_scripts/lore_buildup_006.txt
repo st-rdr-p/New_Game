@@ -1,0 +1,111 @@
+==========================
+LORE ENTRY 06: BUILD-UP
+Zone 5 · The Forest — Deep
+==========================
+
+NARRATOR - MAIN TEXT
+Duration: ~25 seconds
+
+---
+
+"I finally saw it.
+
+Pixelated. Blue. Straight pupils instead of circles — pupils that end at a point. It spoke. Its voice was autotuned down to something inhuman. It said: 'You should really watch what you say.'
+
+It knew my name before I told it. It taunted me. It let me hit it. I think it was enjoying it."
+
+---
+
+THE ENTITY SPEAKS (Autotuned/Inhuman):
+[Use heavy audio processing, pitch-shift down, robotic/synthetic overlay]
+"You should really watch what you say."
+
+---
+
+[AUDIO SPIKE — 4 SECONDS OF SCREAMING, THEN SILENCE]
+
+---
+
+Final realization (continuing as narrator):
+
+"I asked what it was. It didn't answer. I think that was the answer."
+
+---
+
+VOICE ACTING NOTES:
+
+NARRATOR SECTION - Recounting the first sighting:
+- Tone: Awe mixed with growing dread as details emerge
+- "I finally saw it." — major statement, significant pause before/after
+- Physical description ("Pixelated. Blue...") — delivered with a kind of horrified fascination
+- "Straight pupils instead of circles — pupils that end at a point" — the wrongness of the visual
+- Building to: "It spoke." — everything is now moving, it's not just a presence
+- Delivery shifts to personal encounter as the Entity becomes active
+- "It knew my name before I told it. It taunted me." — realization of violation
+- "It let me hit it. I think it was enjoying it." — lands with chilling implication. Emphasis on "enjoying."
+
+THE ENTITY SPEAKS:
+- NOT the narrator. Different voice entirely.
+- Should be processed/autotuned heavily — inhuman, synthetic, wrong
+- "You should really watch what you say." — delivered with playful menace
+- Suggest: Machine-learning generated speech, digital distortion, pitched unnaturally low
+- This should be disturbing, not quite threatening, more like... correcting someone
+- Optional: Layer multiple pitches/voices to suggest something not-quite-one-being
+
+AUDIO SPIKE (4 seconds of screaming):
+- The player's own scream during the encounter, captured as part of the log
+- This is AUDIO EVIDENCE in the document itself
+- After the Entity speaks, the screaming should feel like immediate violence/terror
+- Then: Sudden complete silence (2-3 seconds of dead silence)
+- The silence is MORE disturbing than the screaming
+
+FINAL SECTION:
+- "I asked what it was. It didn't answer. I think that was the answer."
+- Delivered with quiet understanding
+- The non-answer reveals everything
+- This is the endpoint of horrified comprehension
+
+---
+
+FILE FORMAT FOR EXPORT:
+
+OPTION A (Single integrated file):
+- karma_006_main.mp3 (~30-35 seconds total, includes Entity speech + screaming spike)
+
+OPTION B (Multiple tracks to assemble):
+- buildup_006_narrator_start.mp3 (~12-14 sec, narrator section before Entity speaks)
+- buildup_006_entity_speech.mp3 (~2-3 sec, autotuned Entity voice only)
+- buildup_006_scream_spike.ogg (~6 seconds, silence + screaming + silence)
+- buildup_006_narrator_end.mp3 (~3 sec, final realization)
+
+AUDIO PRODUCTION NOTES:
+- Entity voice should use heavy processing (highly recommended separate track)
+- Screaming spike should feel like embedded evidence/recording artifact
+- Silence after screaming is intentional, do NOT rush past it
+- This entry should feel "raw" compared to earlier logs (sounds like urgent documentation)
+
+---
+
+VISUAL PROGRAMMING NOTE:
+After this log is collected, apply RetroGraphicsEffect (SegaGenesis preset) to Entity's renderer.
+This creates visual distinction: Entity = pixelated, World = normal
+Matches the narrative description "Pixelated. Blue."
+
+GAMEPLAY CONTEXT:
+- This is where the Entity stops toying from distance
+- First time player sees its actual form
+- First time player can damage it (and witness Entity enjoying the hits)
+- Establishes the Entity's superiority and playfulness
+- Shift in tone: From hunted → To entertainment in Entity's "rehearsal"
+
+---
+
+CHARACTER VOICE EVOLUTION:
+This is a dramatic shift from previous entries.
+- DREAD, FEAR, HORROR: Confused, panicked, piecing together
+- FREEFALL, KARMA: Analytical, understanding the Entity's intent
+- BUILD-UP: Direct confrontation, seeing the threat face-to-face, realization of its alien nature
+
+This is the moment everything becomes REAL and VISUAL for the protagonist.
+
+==========================

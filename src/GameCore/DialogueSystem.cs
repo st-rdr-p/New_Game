@@ -238,8 +238,8 @@ namespace GameCore
     /// </summary>
     public class DialogueBuilder
     {
-        private DialogueComponent _dialogueComponent;
-        private DialogueSequence _currentSequence;
+        private DialogueComponent _dialogueComponent = null!;
+        private DialogueSequence? _currentSequence;
         private int _sequenceIdCounter = 0;
 
         public DialogueBuilder(string entityName)
@@ -256,7 +256,7 @@ namespace GameCore
         }
 
         /// <summary>Add a line to the current sequence.</summary>
-        public DialogueBuilder Line(string speaker, string text, float duration = 0, string audioClip = null)
+        public DialogueBuilder Line(string speaker, string text, float duration = 0, string? audioClip = null)
         {
             if (_currentSequence == null)
                 Sequence();

@@ -1,0 +1,37 @@
+==========================
+LORE ENTRY 01: DREAD
+Zone 1 · The Store
+==========================
+
+NARRATOR - MAIN TEXT
+Duration: ~25 seconds
+
+---
+
+"There is this one disc though… Bright red. No label on its fully transparent case. No writing on the case or disc. I reach for it and then something calls my name. When I look back — it's on the ceiling. The owner tells me to just take it. 'No one's gonna buy it.' I pass. I get to my car. The disc is on the passenger seat."
+
+---
+
+[CORRUPTED FILE — 3 LINES MISSING]
+
+Then continue with:
+
+"Something is already watching. It has been since before I walked through that door."
+
+---
+
+VOICE ACTING NOTES:
+- Tone: Unsettling, creeping dread, increasingly paranoid
+- Start calm and observational
+- Build tension as the disc moves (ceiling mention)
+- Final line should feel ominous and watched
+- Think: Lost media horror, cosmic dread, feeling of being hunted
+
+---
+
+FILE FORMAT FOR EXPORT:
+In-game line reference: dread_001_main.mp3
+Expected duration: 25-30 seconds
+File quality: 44.1kHz, 16-bit preferred
+
+==========================

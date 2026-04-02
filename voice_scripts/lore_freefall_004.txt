@@ -1,0 +1,72 @@
+==========================
+LORE ENTRY 04: FREEFALL
+Zone 4 · The Road
+==========================
+
+NARRATOR - MAIN TEXT
+Duration: ~22 seconds
+
+---
+
+"My brake cord was cut. At 120 miles an hour. I blew a red light. The back of the car got clipped. I tumbled down a hill. I don't know how long it took.
+
+Here is what I know: the disc was still in the cupholder when I crawled out. The car was on fire. Then the fire just — stopped. Like something put a cup over it."
+
+---
+
+[TEXT CORRUPTION — character encoding lost]
+
+---
+
+Final passage (realization/analysis):
+
+"It doesn't want me dead. Not yet. If it wanted me dead I'd already be dead. It wants something from me first. And I have no idea what that is."
+
+---
+
+VOICE ACTING NOTES:
+- Tone: Shifts from frantic survival recollection to cold analytical fear
+- Brake cord section: Panic, disorientation, physical trauma (gasping, breathless)
+- "I don't know how long it took" — disassociation moment, shift toward observer perspective
+- "Here is what I know:" — tone shifts HARD. This is the analytical section. Calm. Collected. More dangerous.
+- Disc detail: Almost matter-of-fact, but with buried horror at the wrongness
+- Fire stopping: The moment of realization that draws the conclusion
+- "Like something put a cup over it" — the simile is chilling in its mundanity
+- [TEXT CORRUPTION] gap: Silence for player imagination (~2 seconds)
+- Final passage: MOST IMPORTANT. This is the revelation. Delivered with dawning horror turning into defiance/determination
+- "It doesn't want me dead" — statement of fact, unsettling realization
+- "Not yet" — ominous qualifier
+- "If it wanted me dead I'd already be dead" — acceptance of power imbalance
+- "It wants something from me first" — desperation and curiosity mixing
+- "And I have no idea what that is" — lands as both admission of helplessness AND refusal to give up
+- Final line delivery should suggest: FEAR + DETERMINATION to survive and find out why
+
+CHARACTER VOICE EVOLUTION:
+- Start: Panicked survivor, raw adrenaline
+- Middle: Shock survivor recounting facts
+- After corruption: Analytical, threatening calm
+- Final realization: Mix of fear and hard determination
+
+---
+
+FILE FORMAT FOR EXPORT:
+Primary file: freefall_004_main.mp3 (~28-32 seconds total)
+- Includes full monologue with [CORRUPTION] silence built in
+- Pacing should reflect the tonal shifts (frantic → calm → determined)
+Expected total duration: 28-32 seconds
+File quality: 44.1kHz, 16-bit preferred
+
+PRODUCTION NOTES:
+- This is the MIDPOINT REVELATION
+- Everything the player has experienced so far becomes recontextualized as deliberate restraint
+- The delivery of "If it wanted me dead I'd already be dead" should be quietly terrifying
+- This is where protagonist shifts from pure victim to someone analyzing the Entity's behavior
+- The [CORRUPTION] section obscures what the Entity might actually want (narrative mystery)
+- Should feel like finding a message from someone who survived (but may not survive much longer)
+
+POST-ENTRY GAMEPLAY TRIGGER:
+- Entity AI increases aggression after this entry
+- Disc item gains red pulse animation (visual link to the Entity's power over it)
+- Player gains new context: Entity is *testing* or *evaluating* them
+
+==========================
