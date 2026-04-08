@@ -70,7 +70,7 @@ namespace GameCore
                 // No line displayed yet, show first line
                 if (!_activeDialogue.AdvanceLine())
                 {
-                    _activeDialogue = null;
+                    _activeDialogue = null!;
                     OnHideDialogue?.Invoke();
                     return;
                 }

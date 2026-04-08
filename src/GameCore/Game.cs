@@ -26,6 +26,14 @@ namespace GameCore
             return entity;
         }
 
+        public void AddEntity(Entity entity)
+        {
+            if (!_entities.Contains(entity))
+            {
+                _entities.Add(entity);
+            }
+        }
+
         public void AddSystem(ISystem system)
         {
             _systems.Add(system);

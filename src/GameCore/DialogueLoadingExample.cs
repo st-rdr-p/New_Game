@@ -49,7 +49,7 @@ namespace GameCore
         /// <summary>
         /// Find the dialogue_data.json file in the project.
         /// </summary>
-        private static string FindDialogueFile()
+        private static string? FindDialogueFile()
         {
             // Try multiple common paths
             string[] searchPaths = new[]
@@ -162,27 +162,19 @@ namespace GameCore
 
         /// <summary>
         /// Example: Complete game setup with dialogue.
+        /// NOTE: This example requires AudioBridge which is not available in GameCore.
+        /// In a real implementation, provide an IEngineAudio implementation.
         /// </summary>
-        public static void CompleteGameSetup()
+        public static void CompleteGameSetupExample()
         {
-            // Create game
-            var game = new Game();
-            var audio = new AudioBridge();
-            var dialogueSystem = new DialogueSystem(audio);
-
-            // Setup dialogue UI
-            SetupDialogueUI(dialogueSystem);
-
-            // Load all dialogue from JSON
-            SetupGameWithDialogueData(game, dialogueSystem, audio);
-
-            // Add a custom dialogue entity (not in JSON)
-            game.AddEntity(CreateCustomDialogueEntity());
-
-            // Add systems
-            game.AddSystem(dialogueSystem);
-
-            Console.WriteLine("Game ready with dialogue!");
+            // Example code (requires IEngineAudio implementation to run):
+            // var input = new InputImplementation();
+            // var audio = new AudioImplementation();
+            // var game = new Game(input, audio);
+            // var dialogueSystem = new DialogueSystem(audio);
+            //
+            // game.AddSystem(dialogueSystem);
+            // Console.WriteLine("Game ready with dialogue!");
         }
     }
 
@@ -197,8 +189,8 @@ namespace GameCore
         /// </summary>
         public class DialogueManagerComponent
         {
-            private DialogueSystem _dialogueSystem;
-            private List<Entity> _dialogueEntities;
+            private DialogueSystem? _dialogueSystem;
+            private List<Entity>? _dialogueEntities;
 
             public void Initialize(/*MonoBehaviour context*/)
             {

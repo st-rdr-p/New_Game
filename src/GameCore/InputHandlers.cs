@@ -44,12 +44,14 @@ namespace GameCore
             switch (action)
             {
                 case InputAction.MenuUp:
-                    _currentMenu.NavigateUp();
+                    // Navigate up in menu
+                    _currentMenu.SelectPrevious();
                     OnMenuNavigated?.Invoke(_currentMenu);
                     break;
 
                 case InputAction.MenuDown:
-                    _currentMenu.NavigateDown();
+                    // Navigate down in menu
+                    _currentMenu.SelectNext();
                     OnMenuNavigated?.Invoke(_currentMenu);
                     break;
 
@@ -63,7 +65,9 @@ namespace GameCore
 
                 case InputAction.MenuSelect:
                 case InputAction.MenuCancel:
-                    var button = _currentMenu.GetCurrentButton();
+                    var button = _currentMenu.Buttons.Count > _currentMenu.SelectedButtonIndex 
+                        ? _currentMenu.Buttons[_currentMenu.SelectedButtonIndex] 
+                        : null;
                     if (button != null)
                     {
                         button.OnSelected?.Invoke();
@@ -109,6 +113,7 @@ namespace GameCore
         private DialogueComponent _currentDialogue;
         private InputManager _inputManager;
         private bool _isDialogueActive;
+        private int _selectedChoiceIndex = 0;
 
         public event Action OnDialogueAdvanced;
         public event Action<int> OnChoiceSelected;
@@ -129,6 +134,7 @@ namespace GameCore
         {
             _currentDialogue = dialogue;
             _isDialogueActive = dialogue != null && dialogue.IsDialogueActive;
+            _selectedChoiceIndex = 0;
         }
 
         /// <summary>
@@ -143,22 +149,34 @@ namespace GameCore
             {
                 case InputAction.DialogueNext:
                     // Advance to next dialogue line or show choices
-                    _currentDialogue.AdvanceDialogue();
+                    // This would be handled by the DialogueSystem listening to OnDialogueAdvanced
                     OnDialogueAdvanced?.Invoke();
                     break;
 
                 case InputAction.DialogueChoiceUp:
-                    _currentDialogue.NavigateChoicesUp();
+                    // Navigate up in choices
+                    if (_selectedChoiceIndex > 0)
+                    {
+                        _selectedChoiceIndex--;
+                    }
                     break;
 
                 case InputAction.DialogueChoiceDown:
-                    _currentDialogue.NavigateChoicesDown();
+                    // Navigate down in choices
+                    if (_currentDialogue.CurrentSequenceIndex >= 0 && 
+                        _currentDialogue.Sequences.TryGetValue(_currentDialogue.CurrentSequenceIndex, out var sequence))
+                    {
+                        if (_selectedChoiceIndex < sequence.Choices.Count - 1)
+                        {
+                            _selectedChoiceIndex++;
+                        }
+                    }
                     break;
 
                 case InputAction.DialogueChoiceSelect:
-                    var choiceIndex = _currentDialogue.GetSelectedChoiceIndex();
-                    _currentDialogue.SelectChoice(choiceIndex);
-                    OnChoiceSelected?.Invoke(choiceIndex);
+                    // Select the highlighted choice
+                    _currentDialogue.ChooseOption(_selectedChoiceIndex);
+                    OnChoiceSelected?.Invoke(_selectedChoiceIndex);
                     break;
 
                 case InputAction.DialogueSkip:

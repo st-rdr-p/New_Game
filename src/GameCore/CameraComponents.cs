@@ -16,7 +16,7 @@ namespace GameCore
     /// </summary>
     public class CameraController : Component
     {
-        public Entity FollowTarget { get; set; }
+        public Entity? FollowTarget { get; set; }
         public float Distance { get; set; } = 5f;
         public float Height { get; set; } = 2f;
         public float MouseSensitivity { get; set; } = 2f;

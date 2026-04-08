@@ -76,7 +76,11 @@ namespace GameCore
         /// Play a sound effect on an entity.
         /// </summary>
         public void PlaySoundOnEntity(Entity entity, string soundId, float volume = 1.0f)
-        {
+        {            // Ensure audio manager is initialized
+            if (_audioManager == null)
+            {
+                _audioManager = new AudioManager { IsInitialized = true };
+            }
             // Get or create audio source
             if (!entity.TryGetComponent<AudioSource>(out var audioSource))
             {
@@ -111,6 +115,12 @@ namespace GameCore
             _isFadingOut = false;
             _musicFadeTimer = 0;
             _musicFadeDuration = fadeInTime;
+
+            // Ensure audio manager is initialized
+            if (_audioManager == null)
+            {
+                _audioManager = new AudioManager { IsInitialized = true };
+            }
 
             var effectiveVolume = volume * _audioManager.MusicVolume * _audioManager.MasterVolume;
             _audio.PlayBackgroundMusic(musicId, effectiveVolume);

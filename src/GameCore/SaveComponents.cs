@@ -145,15 +145,21 @@ namespace GameCore
         /// <summary>Restore entity state from save.</summary>
         public void RestoreState(EntityState state)
         {
+            if (state == null)
+            {
+                Console.WriteLine("ERROR: Cannot restore from null EntityState");
+                return;
+            }
+
             OnRestoreState?.Invoke(state);
 
             // Default restoration
-            if (Owner.TryGetComponent<Transform3D>(out var transform))
+            if (Owner != null && Owner.TryGetComponent<Transform3D>(out var transform))
             {
                 transform.Position = new Vector3(state.PositionX, state.PositionY, state.PositionZ);
             }
 
-            SaveData = new Dictionary<string, object>(state.CustomData);
+            SaveData = new Dictionary<string, object>(state.CustomData ?? new Dictionary<string, object>());
         }
     }
 

@@ -20,6 +20,15 @@ namespace GameCore
             return component;
         }
 
+        public T GetComponent<T>() where T : Component
+        {
+            if (_components.TryGetValue(typeof(T), out var c) && c is T typed)
+            {
+                return typed;
+            }
+            return null;
+        }
+
         public bool TryGetComponent<T>(out T component) where T : Component
         {
             if (_components.TryGetValue(typeof(T), out var c) && c is T typed)

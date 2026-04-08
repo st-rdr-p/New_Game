@@ -9,21 +9,21 @@ namespace GameCore
     public class MenuButton
     {
         /// <summary>Display text for this button.</summary>
-        public string Text { get; set; }
+        public string Text { get; set; } = "";
 
         /// <summary>Whether this button is currently highlighted/selected.</summary>
         public bool IsSelected { get; set; } = false;
 
         /// <summary>Callback when button is pressed.</summary>
-        public Action OnPressed { get; set; }
+        public Action OnPressed { get; set; } = () => { };
 
         /// <summary>Optional callback when button is selected (before pressing).</summary>
-        public Action OnSelected { get; set; }
+        public Action OnSelected { get; set; } = () => { };
 
-        public MenuButton(string text, Action onPressed = null)
+        public MenuButton(string text, Action? onPressed = null)
         {
             Text = text;
-            OnPressed = onPressed;
+            OnPressed = onPressed ?? (() => { });
         }
     }
 
@@ -39,7 +39,7 @@ namespace GameCore
         public MenuType Type { get; set; }
 
         /// <summary>Title of the menu.</summary>
-        public string Title { get; set; }
+        public string Title { get; set; } = "";
 
         /// <summary>All buttons in this menu.</summary>
         public List<MenuButton> Buttons { get; set; } = new();
@@ -51,16 +51,16 @@ namespace GameCore
         public bool IsActive { get; set; } = false;
 
         /// <summary>Callback when menu is opened.</summary>
-        public Action OnMenuOpen { get; set; }
+        public Action OnMenuOpen { get; set; } = () => { };
 
         /// <summary>Callback when menu is closed.</summary>
-        public Action OnMenuClose { get; set; }
+        public Action OnMenuClose { get; set; } = () => { };
 
         /// <summary>Callback when button is selected.</summary>
-        public Action<int> OnButtonSelected { get; set; }
+        public Action<int> OnButtonSelected { get; set; } = (_) => { };
 
         /// <summary>Callback when button is pressed.</summary>
-        public Action<int> OnButtonPressed { get; set; }
+        public Action<int> OnButtonPressed { get; set; } = (_) => { };
 
         /// <summary>Whether to pause game while menu is active.</summary>
         public bool PausesGame { get; set; } = true;

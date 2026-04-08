@@ -9,22 +9,22 @@ namespace GameCore
     public class DialogueLine
     {
         /// <summary>Character name speaking the line.</summary>
-        public string Speaker { get; set; }
+        public string Speaker { get; set; } = "";
 
         /// <summary>The dialogue text.</summary>
-        public string Text { get; set; }
+        public string Text { get; set; } = "";
 
         /// <summary>How long to display this line (seconds). 0 = wait for player input.</summary>
         public float Duration { get; set; }
 
         /// <summary>Audio file to play (if any).</summary>
-        public string AudioClip { get; set; }
+        public string? AudioClip { get; set; }
 
         /// <summary>Optional callback when this line is displayed.</summary>
-        public Action OnLineStart { get; set; }
+        public Action OnLineStart { get; set; } = () => { };
 
         /// <summary>Optional callback when this line ends.</summary>
-        public Action OnLineEnd { get; set; }
+        public Action OnLineEnd { get; set; } = () => { };
 
         public DialogueLine(string speaker, string text, float duration = 0)
         {
@@ -40,13 +40,13 @@ namespace GameCore
     public class DialogueChoice
     {
         /// <summary>Display text for this choice.</summary>
-        public string ChoiceText { get; set; }
+        public string ChoiceText { get; set; } = "";
 
         /// <summary>Index of the next dialogue sequence to play.</summary>
         public int NextSequenceIndex { get; set; }
 
         /// <summary>Optional callback when choice is selected.</summary>
-        public Action OnChosen { get; set; }
+        public Action OnChosen { get; set; } = () => { };
 
         public DialogueChoice(string text, int nextSequenceIndex)
         {
@@ -73,7 +73,7 @@ namespace GameCore
         public int NextSequenceIndex { get; set; } = -1;
 
         /// <summary>Callback when this sequence completes.</summary>
-        public Action OnSequenceEnd { get; set; }
+        public Action OnSequenceEnd { get; set; } = () => { };
 
         public DialogueSequence(int id)
         {
@@ -97,7 +97,7 @@ namespace GameCore
     public class DialogueComponent : Component
     {
         /// <summary>Name of the entity speaking (display name).</summary>
-        public string EntityName { get; set; }
+        public string EntityName { get; set; } = "";
 
         /// <summary>All dialogue sequences for this entity.</summary>
         public Dictionary<int, DialogueSequence> Sequences { get; set; } = new();
@@ -112,13 +112,13 @@ namespace GameCore
         public bool IsDialogueActive { get; private set; } = false;
 
         /// <summary>Callback when dialogue starts.</summary>
-        public Action<int> OnDialogueStart { get; set; }  // Pass sequence ID
+        public Action<int> OnDialogueStart { get; set; } = (_) => { };
 
         /// <summary>Callback when dialogue ends.</summary>
-        public Action OnDialogueEnd { get; set; }
+        public Action OnDialogueEnd { get; set; } = () => { };
 
         /// <summary>Callback when a choice is displayed.</summary>
-        public Action<List<DialogueChoice>> OnChoicesDisplayed { get; set; }
+        public Action<List<DialogueChoice>> OnChoicesDisplayed { get; set; } = (_) => { };
 
         public DialogueComponent(string entityName)
         {
@@ -257,10 +257,10 @@ namespace GameCore
         public bool CanTriggerMultipleTimes { get; set; } = true;
 
         /// <summary>Callback when encounter is triggered.</summary>
-        public Action OnEncounterStart { get; set; }
+        public Action OnEncounterStart { get; set; } = () => { };
 
         /// <summary>Callback when encounter ends.</summary>
-        public Action OnEncounterEnd { get; set; }
+        public Action OnEncounterEnd { get; set; } = () => { };
 
         /// <summary>For enemies: whether to start combat after dialogue.</summary>
         public bool StartCombatAfter { get; set; } = false;

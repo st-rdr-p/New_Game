@@ -27,6 +27,29 @@
     <Compile Include="../src/GameCore/Components3D.cs" />
     <Compile Include="../src/GameCore/GameplayComponents.cs" />
     <Compile Include="../src/GameCore/CharacterControllers.cs" />
+    <Compile Include="../src/GameCore/DialogueComponents.cs" />
+    <Compile Include="../src/GameCore/DialogueSystem.cs" />
+    <Compile Include="../src/GameCore/SaveComponents.cs" />
+    <Compile Include="../src/GameCore/SaveLoadSystem.cs" />
+    <Compile Include="../src/GameCore/InputManager.cs" />
+    <Compile Include="../src/GameCore/InputHandlers.cs" />
+    <Compile Include="../src/GameCore/AudioComponents.cs" />
+    <Compile Include="../src/GameCore/AudioSystem.cs" />
+    <Compile Include="../src/GameCore/UIComponents.cs" />
+    <Compile Include="../src/GameCore/UISystem.cs" />
+    <Compile Include="../src/GameCore/MenuComponents.cs" />
+    <Compile Include="../src/GameCore/MenuSystem.cs" />
+    <Compile Include="../src/GameCore/RetroGraphicsEffect.cs" />
+    <Compile Include="../src/GameCore/RetroGraphicsSystem.cs" />
+    <Compile Include="../src/GameCore/Level.cs" />
+    <Compile Include="../src/GameCore/LevelLoader.cs" />
+    <Compile Include="../src/GameCore/SceneManager.cs" />
+    <Compile Include="../src/GameCore/CheckpointSystem.cs" />
+    <Compile Include="../src/GameCore/GameSystems.cs" />
+    <Compile Include="../src/GameCore/ISystem.cs" />
+    <Compile Include="../src/GameCore/Scene.cs" />
+    <Compile Include="../src/GameCore/Game.cs" />
+    <Compile Include="../src/GameCore/IEngineRenderer.cs" />
   </ItemGroup>
 
 </Project>

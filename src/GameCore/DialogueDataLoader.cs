@@ -23,13 +23,13 @@ namespace GameCore
         public class DialogueEntityData
         {
             [JsonPropertyName("id")]
-            public string Id { get; set; }
+            public string Id { get; set; } = "";
 
             [JsonPropertyName("name")]
-            public string Name { get; set; }
+            public string Name { get; set; } = "";
 
             [JsonPropertyName("type")]
-            public string Type { get; set; }  // "NPC", "Enemy", "Boss"
+            public string Type { get; set; } = "";  // "NPC", "Enemy", "Boss"
 
             [JsonPropertyName("triggerRange")]
             public float TriggerRange { get; set; } = 10f;
@@ -50,7 +50,7 @@ namespace GameCore
             public int Id { get; set; }
 
             [JsonPropertyName("name")]
-            public string Name { get; set; }
+            public string Name { get; set; } = "";
 
             [JsonPropertyName("lines")]
             public List<DialogueLineData> Lines { get; set; } = new();
@@ -65,22 +65,22 @@ namespace GameCore
         public class DialogueLineData
         {
             [JsonPropertyName("speaker")]
-            public string Speaker { get; set; }
+            public string Speaker { get; set; } = "";
 
             [JsonPropertyName("text")]
-            public string Text { get; set; }
+            public string Text { get; set; } = "";
 
             [JsonPropertyName("duration")]
             public float Duration { get; set; } = 0;
 
             [JsonPropertyName("audioFile")]
-            public string AudioFile { get; set; }
+            public string? AudioFile { get; set; }
         }
 
         public class DialogueChoiceData
         {
             [JsonPropertyName("text")]
-            public string Text { get; set; }
+            public string Text { get; set; } = "";
 
             [JsonPropertyName("nextSequence")]
             public int NextSequence { get; set; } = -1;

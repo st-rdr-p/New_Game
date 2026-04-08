@@ -96,7 +96,7 @@ namespace GameCore
             SetKeyBinding(InputAction.MoveLeft, ConsoleKey.A, ConsoleKey.LeftArrow);
             SetKeyBinding(InputAction.MoveRight, ConsoleKey.D, ConsoleKey.RightArrow);
             SetKeyBinding(InputAction.Jump, ConsoleKey.Spacebar);
-            SetKeyBinding(InputAction.Dash, ConsoleKey.LeftShift);
+            SetKeyBinding(InputAction.Dash, ConsoleKey.L);
 
             // Game control
             SetKeyBinding(InputAction.Pause, ConsoleKey.P, ConsoleKey.Escape);
